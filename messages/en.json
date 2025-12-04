@@ -1,0 +1,114 @@
+{
+    "HomePage": {
+        "title": "Sopreden Trading",
+        "subtitle": "A World of Quality in Every Seed"
+    },
+    "Navigation": {
+        "home": "Home",
+        "products": "Our products",
+        "services": "Services",
+        "about": "About us",
+        "news": "News",
+        "contact": "Contact Us"
+    },
+    "Hero": {
+        "title": "A World of Quality in Every Seed",
+        "subtitle": "Discover our premium selection of sunflower and pumpkin seeds, tailored for your needs.",
+        "cta": "View Products"
+    },
+    "Products": {
+        "title": "Our Products",
+        "subtitle": "Explore our wide range of high-quality seeds and oils.",
+        "items": {
+            "pumpkin-seeds": {
+                "title": "Pumpkin Seeds",
+                "description": "We mainly work with 'Lady nails'. Pumpkin seeds are widely used for culinary purposes mainly due to the wide number of health benefits they provide.",
+                "image": "/images/products/pumpkin_seeds.png"
+            },
+            "sunflower-chips": {
+                "title": "Sunflower Chips",
+                "description": "This is the broken fraction which is a derivative of the dehulling process and is mainly used for birdfeed.",
+                "image": "/images/products/sunflower_chips.png"
+            },
+            "stripped-sunflower": {
+                "title": "Stripped Sunflower",
+                "description": "We can offer a variety of stripped sunflower from those for birdfeed (Pioneer or badger) to those for the snack industry and baking (Jumbo, XXL).",
+                "image": "/images/products/stripped_sunflower.png"
+            },
+            "sunflower-kernels": {
+                "title": "Sunflower Kernels",
+                "description": "Bakery-grade sunflower kernels for baking and animal feed, as well as superior and confectionery grade varieties.",
+                "image": "/images/products/sunflower_kernels.png"
+            },
+            "palm-oil": {
+                "title": "Palm Oil",
+                "description": "Responsible selection of palm oil products for the food industry (milk, sweets, popcorn, nuts) and bio-diesel production.",
+                "image": "/images/products/palm_oil.png"
+            }
+        }
+    },
+    "Services": {
+        "title": "Our Services",
+        "subtitle": "Specialized solutions for your business needs.",
+        "items": {
+            "specialized-sunflower": {
+                "title": "Specialized Sunflower Products",
+                "description": "Designed to fulfill your exact needs. From bakery-grade sunflower kernels for baking and animal feed to superior and confectionery grade varieties."
+            },
+            "palm-oil-solutions": {
+                "title": "Versatile Palm Oil Solutions",
+                "description": "Responsible selection of palm oil products for the food industry (milk, sweets, popcorn, nuts) and bio-diesel production."
+            },
+            "premium-seed": {
+                "title": "Premium Seed Selection",
+                "description": "Outstanding selection of 'Lady Nail' pumpkin seeds, carefully picked and treated for unbeatably high quality."
+            }
+        }
+    },
+    "About": {
+        "title": "About Us",
+        "subtitle": "Learn more about Sopreden Trading.",
+        "content": "Sopreden Trading is a leading provider of high-quality seeds and oils. We are committed to sustainability and quality in every product we offer. Our dedication to excellence ensures that our customers receive only the best sunflower and pumpkin seeds, as well as responsible palm oil solutions."
+    },
+    "News": {
+        "title": "Latest News",
+        "subtitle": "Stay updated with the latest from Sopreden.",
+        "items": {
+            "benefits-seeds": {
+                "title": "Discover the Benefits of Sopreden’s Premium Seed Selection",
+                "date": "2023-10-01",
+                "image": "/images/news/news_seeds.png"
+            },
+            "sustainability-palm-oil": {
+                "title": "Sopreden’s Commitment to Sustainability: A Look into Our Palm Oil Production",
+                "date": "2023-09-15",
+                "image": "/images/news/news_seeds.png"
+            },
+            "sunflower-kernel-bakery": {
+                "title": "Sopreden’s Sunflower Kernel Bakery Grade: A New Favorite in the Baking Industry",
+                "date": "2023-08-20",
+                "image": "/images/news/news_seeds.png"
+            },
+            "sunflower-crude-oil": {
+                "title": "Sopreden Introduces Sunflower Crude Oil to Its Product Line",
+                "date": "2023-07-10",
+                "image": "/images/news/news_seeds.png"
+            }
+        }
+    },
+    "Contact": {
+        "title": "Contact Us",
+        "subtitle": "Get in touch with us for any inquiries.",
+        "form": {
+            "name": "Name",
+            "email": "Email",
+            "message": "Message",
+            "submit": "Send Message"
+        },
+        "info": {
+            "address": "Docho Mihaylov 1, Silistra, Bulgaria",
+            "email": "contact@sopreden.com",
+            "phone": "+359 89 541 1947"
+        }
+    }
+}
