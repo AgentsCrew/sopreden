@@ -100,19 +100,5 @@
             }
         }
     },
-    "Contact": {
-        "title": "Contact Us",
-        "subtitle": "Get in touch with us for any inquiries.",
-        "form": {
-            "name": "Name",
-            "email": "Email",
-            "message": "Message",
-            "submit": "Send Message"
-        },
-        "info": {
-            "address": "Docho Mihaylov 1, Silistra, Bulgaria",
-            "email": "contact@sopreden.com",
-            "phone": "+359 89 541 1947"
-        }
-    }
+    "Contact": {}
 }

@@ -1,9 +1,20 @@
+'use client';
+
 import { useTranslations } from 'next-intl';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+import { useActionState } from 'react';
+import { submitContactForm } from '@/actions/contact';
+
+const initialState = {
+    success: false,
+    message: '',
+    error: ''
+};
 
 export default function ContactPage() {
     const t = useTranslations('Contact');
+    const [state, formAction, isPending] = useActionState(submitContactForm, initialState);
 
     return (
         <div className="flex min-h-screen flex-col bg-white text-black">
@@ -32,7 +43,17 @@ export default function ContactPage() {
                                 </p>
                             </div>
                         </div>
-                        <form className="space-y-4">
+                        <form action={formAction} className="space-y-4">
+                            {state.success && (
+                                <div className="rounded-md bg-green-50 p-4 text-sm text-green-700">
+                                    {state.message}
+                                </div>
+                            )}
+                            {state.error && (
+                                <div className="rounded-md bg-red-50 p-4 text-sm text-red-700">
+                                    {state.error}
+                                </div>
+                            )}
                             <div>
                                 <label htmlFor="name" className="mb-2 block text-sm font-medium">
                                     {t('form.name')}
@@ -40,6 +61,8 @@ export default function ContactPage() {
                                 <input
                                     type="text"
                                     id="name"
+                                    name="name"
+                                    required
                                     className="w-full rounded-md border border-gray-300 p-3 outline-none focus:border-black"
                                 />
                             </div>
@@ -50,6 +73,8 @@ export default function ContactPage() {
                                 <input
                                     type="email"
                                     id="email"
+                                    name="email"
+                                    required
                                     className="w-full rounded-md border border-gray-300 p-3 outline-none focus:border-black"
                                 />
                             </div>
@@ -59,15 +84,18 @@ export default function ContactPage() {
                                 </label>
                                 <textarea
                                     id="message"
+                                    name="message"
                                     rows={4}
+                                    required
                                     className="w-full rounded-md border border-gray-300 p-3 outline-none focus:border-black"
                                 ></textarea>
                             </div>
                             <button
                                 type="submit"
-                                className="w-full rounded-md bg-black py-3 font-medium text-white transition-colors hover:bg-gray-800"
+                                disabled={isPending}
+                                className="w-full rounded-md bg-black py-3 font-medium text-white transition-colors hover:bg-gray-800 disabled:opacity-50"
                             >
-                                {t('form.submit')}
+                                {isPending ? 'Sending...' : t('form.submit')}
                             </button>
                         </form>
                     </div>
