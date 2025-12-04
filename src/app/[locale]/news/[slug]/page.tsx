@@ -39,13 +39,7 @@ function NewsDetailContent({ slug }: { slug: string }) {
                         />
                     </div>
                     <div className="prose prose-lg max-w-none text-gray-700">
-                        {/* In a real app, this would be the full content. For now we reuse description or add placeholder content */}
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                        </p>
-                        <p>
-                            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                        </p>
+                        <p>{t(`items.${slug}.content`)}</p>
                     </div>
                 </div>
             </main>

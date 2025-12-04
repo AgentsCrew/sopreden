@@ -77,22 +77,26 @@
             "benefits-seeds": {
                 "title": "Discover the Benefits of Sopreden’s Premium Seed Selection",
                 "date": "2023-10-01",
-                "image": "/images/news/news_seeds.png"
+                "image": "/images/news/premium_seed_selection.jpg",
+                "content": "In the world of agriculture and food production, the quality of seeds plays a pivotal role. Sopreden, a name synonymous with excellence, offers a premium seed selection that stands out for its superior quality and numerous benefits. In this article, we delve into the advantages of choosing Sopreden’s premium seeds and why they are the preferred choice for discerning customers."
             },
             "sustainability-palm-oil": {
                 "title": "Sopreden’s Commitment to Sustainability: A Look into Our Palm Oil Production",
                 "date": "2023-09-15",
-                "image": "/images/news/news_seeds.png"
+                "image": "/images/news/palm_oil_news.jpg",
+                "content": "In an era where sustainability is not just a buzzword but a necessity, Sopreden is proud to highlight its unwavering commitment to responsible and sustainable practices, particularly in our palm oil production. As a leading provider of high-quality agricultural products, including palm oil, we understand the importance of balancing economic growth with environmental stewardship and social responsibility."
             },
             "sunflower-kernel-bakery": {
                 "title": "Sopreden’s Sunflower Kernel Bakery Grade: A New Favorite in the Baking Industry",
                 "date": "2023-08-20",
-                "image": "/images/news/news_seeds.png"
+                "image": "/images/news/sunflower_bakery_news.jpg",
+                "content": "The baking industry is constantly evolving, with bakers and food manufacturers always on the lookout for high-quality ingredients that can elevate their products. Sopreden, a trusted name in agricultural products, has recently introduced its Sunflower Kernel Bakery Grade, which is quickly becoming a new favorite in the baking world."
             },
             "sunflower-crude-oil": {
                 "title": "Sopreden Introduces Sunflower Crude Oil to Its Product Line",
                 "date": "2023-07-10",
-                "image": "/images/news/news_seeds.png"
+                "image": "/images/news/sunflower_crude_oil.jpg",
+                "content": "Exciting news from the world of agribusiness! Sopreden, a leading provider of premium sunflower products, palm oil, and pumpkin seeds, has recently announced a significant expansion of its product lineup. The latest addition? Sunflower Crude Oil – a versatile, high-quality product that promises to deliver in…"
             }
         }
     },
