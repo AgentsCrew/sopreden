@@ -1,104 +1,364 @@
 {
-    "HomePage": {
-        "title": "Sopreden Trading",
-        "subtitle": "A World of Quality in Every Seed"
+    "Common": {
+        "companyName": "Sopreden Trading",
+        "tagline": "A World of Quality in Every Seed",
+        "workingHours": "08:00 - 17:00 EET",
+        "phone": "+359 89 541 1947",
+        "email": "contact@sopreden.com",
+        "address": "Docho Mihaylov 1, 7500 Silistra, Bulgaria",
+        "requestQuote": "Request Quote",
+        "contactSales": "Contact Sales",
+        "exploreCatalog": "Explore Catalog",
+        "learnMore": "Learn More",
+        "viewDetails": "View Details",
+        "downloadSpec": "Download Specifications",
+        "chatWhatsApp": "Chat on WhatsApp",
+        "backToProducts": "Back to Products",
+        "backToNews": "Back to News",
+        "allRightsReserved": "All rights reserved.",
+        "certifications": "HACCP & ISO Quality Standards • Non-GMO EU Certified",
+        "originBadge": "EU Origin • Direct Silistra Danube Sourcing"
     },
     "Navigation": {
         "home": "Home",
-        "products": "Our products",
-        "services": "Services",
-        "about": "About us",
-        "news": "News",
-        "contact": "Contact Us"
+        "products": "Our Products",
+        "services": "Services & Logistics",
+        "about": "About Us",
+        "news": "Market News",
+        "contact": "Contact Us",
+        "quote": "Get a Quote"
     },
     "Hero": {
+        "badge": "Leading European Agricultural Commodities Trader",
         "title": "A World of Quality in Every Seed",
-        "subtitle": "Discover our premium selection of sunflower and pumpkin seeds, tailored for your needs.",
-        "cta": "View Products"
+        "subtitle": "Connecting fertile European harvests with global markets. Premium sunflower kernels, 'Lady Nails' pumpkin seeds, and certified vegetable oils shipped to over 257 worldwide destinations.",
+        "ctaPrimary": "Explore Commodities",
+        "ctaSecondary": "Request Trade Quote",
+        "stats": {
+            "destinations": "257+",
+            "destinationsLabel": "Global Ports & Cities",
+            "orders": "9,112+",
+            "ordersLabel": "Shipments Delivered",
+            "transport": "17",
+            "transportLabel": "Multimodal Routes",
+            "warehouses": "875+",
+            "warehousesLabel": "Silo & Warehouse Units"
+        }
+    },
+    "NaturalIngredients": {
+        "badge": "From Danube Plains to Global Ports",
+        "title": "Only Pure, High-Grade Natural Commodities",
+        "p1": "Welcome to Sopreden Trading – your premier gateway for high-purity sunflower commodities, certified palm oil fractions, and select pumpkin seeds. Sourced directly from Bulgaria's fertile North-East Danube agricultural heartland, our products meet rigorous European food safety and industrial standards.",
+        "p2": "We specialize in precision-graded sunflower kernels designed for diverse industrial applications. From bakery-grade cuts tailored for commercial baking and birdfeed, to hand-selected confectionery Jumbo and XXL kernels that command high value in snack manufacturing.",
+        "p3": "Our sustainable palm oil portfolio serves both the confectionery, dairy, and snack food sectors, as well as the rapidly expanding bio-diesel and technical lubrication industries. Furthermore, our flagship 'Lady Nails' pumpkin seeds are prized across culinary and dietary markets.",
+        "p4": "Every single metric ton traded by Sopreden undergoes meticulous optical grading, lab moisture testing, and stringent quality control, guaranteeing exceptional purity and traceability from harvest to container loading.",
+        "cta": "Learn About Our Sourcing"
+    },
+    "StatsSection": {
+        "title": "Global Trade Capacity & Infrastructure",
+        "subtitle": "A robust physical trading network linking Bulgarian production hubs with maritime and overland trade corridors.",
+        "items": {
+            "destinations": {
+                "value": "257+",
+                "label": "Unique Destinations",
+                "description": "Active delivery networks across Europe, Middle East, North Africa, and the Americas."
+            },
+            "transport": {
+                "value": "17",
+                "label": "Multimodal Options",
+                "description": "Danube river barges, Black Sea vessels, intermodal container lines, and overland road trucks."
+            },
+            "orders": {
+                "value": "9,112+",
+                "label": "Orders Fulfilled",
+                "description": "Long-term contracts and spot shipments successfully executed with 99.4% on-time logistics."
+            },
+            "warehouses": {
+                "value": "875+",
+                "label": "Partner Storage Silos",
+                "description": "Climate-controlled, ventilated modern warehousing ensuring zero moisture degradation."
+            }
+        }
     },
     "Products": {
-        "title": "Our Products",
-        "subtitle": "Explore our wide range of high-quality seeds and oils.",
+        "badge": "Certified Commodity Portfolio",
+        "title": "Our Agricultural Products",
+        "subtitle": "Meticulously processed and sorted to exact industrial specifications. Available in 25kg paper/poly bags, big bags, flexitanks, and bulk vessel shipments.",
+        "categories": {
+            "all": "All Commodities",
+            "sunflower": "Sunflower Kernels & Chips",
+            "pumpkin": "Pumpkin Seeds",
+            "oils": "Vegetable & Crude Oils"
+        },
         "items": {
             "pumpkin-seeds": {
-                "title": "Pumpkin Seeds",
-                "description": "We mainly work with 'Lady nails'. Pumpkin seeds are widely used for culinary purposes mainly due to the wide number of health benefits they provide.",
-                "image": "/images/products/pumpkin_seeds.png"
-            },
-            "sunflower-chips": {
-                "title": "Sunflower Chips",
-                "description": "This is the broken fraction which is a derivative of the dehulling process and is mainly used for birdfeed.",
-                "image": "/images/products/sunflower_chips.png"
-            },
-            "stripped-sunflower": {
-                "title": "Stripped Sunflower",
-                "description": "We can offer a variety of stripped sunflower from those for birdfeed (Pioneer or badger) to those for the snack industry and baking (Jumbo, XXL).",
-                "image": "/images/products/stripped_sunflower.png"
+                "title": "Pumpkin Seeds ('Lady Nails')",
+                "category": "pumpkin",
+                "grade": "Food Grade & Snack Standard",
+                "purity": "99.5% Min",
+                "moisture": "Max 8.5%",
+                "packaging": "25kg PP bags, Big Bags (1000kg)",
+                "description": "We specialize in the renowned 'Lady Nails' variety. Characterized by uniform elongated shape, rich nutty aroma, and high zinc/magnesium density, widely used across artisanal baking, savory snacks, and health nutrition.",
+                "longDescription": "Sopreden's 'Lady Nails' pumpkin seeds represent the pinnacle of European seed cultivation. Grown in nutrient-rich soils, each batch is mechanically dehulled, optically sorted by laser color cameras, and packed in nitrogen-flushed or heavy-duty woven bags. High in natural unsaturated fatty acids and essential minerals, they are ideal for roasted snack lines, muesli blends, and cold-pressed botanical oils.",
+                "image": "/images/site/pumpkin_kernel.jpg",
+                "applications": ["Artisanal Bakery & Confectionery", "Roasted & Salted Snack Packs", "Dietary Supplements & Granola", "Cold-Pressed Pumpkin Seed Oil"]
             },
             "sunflower-kernels": {
-                "title": "Sunflower Kernels",
-                "description": "Bakery-grade sunflower kernels for baking and animal feed, as well as superior and confectionery grade varieties.",
-                "image": "/images/products/sunflower_kernels.png"
+                "title": "Sunflower Kernels (Bakery & Confectionery)",
+                "category": "sunflower",
+                "grade": "Premium Confectionery (Jumbo / XXL) & Bakery",
+                "purity": "99.9% Optical Purity",
+                "moisture": "Max 7.0%",
+                "packaging": "25kg craft paper bags, Big Bags",
+                "description": "Available in Bakery Grade and distinguished Confectionery Grade (Jumbo and XXL). Expertly sorted, 99.9% clean, uniform color, and free from bitter aftertaste.",
+                "longDescription": "Our flagship sunflower kernels are celebrated among European master bakers and multinational snack conglomerates. Sourced from high-yielding oil and confection hybrid varieties, seeds undergo multi-stage hulling, aspiration, gravity separation, and Sortex optical sorting. The result is pure, undamaged kernels with exceptional shelf life and crisp texture.",
+                "image": "/images/site/sunflower_confectionery.jpg",
+                "applications": ["Artisanal Bread & Multi-grain Buns", "Energy Bars & Healthy Snacks", "Pralines & Pastry Fillings", "Direct Consumption Snack Industry"]
+            },
+            "sunflower-chips": {
+                "title": "Sunflower Chips (Broken Fraction)",
+                "category": "sunflower",
+                "grade": "Animal Feed & Birdfeed Standard",
+                "purity": "98.5% Clean Kernel Fraction",
+                "moisture": "Max 8.0%",
+                "packaging": "Bulk, Big Bags, 25kg/40kg bags",
+                "description": "A high-nutrient broken kernel derivative obtained during the dehulling process. Rich in essential oils and protein, serving as the gold standard for premium birdfeed and avian nutrition.",
+                "longDescription": "Sunflower chips consist of clean, broken sunflower meat separated during the mechanical dehulling phase. Because they contain the full caloric, lipid, and protein profile of intact kernels at a favorable price point, they are highly sought after by commercial feed mills and bird-food packagers worldwide.",
+                "image": "/images/site/sunflower_chips_prod.jpg",
+                "applications": ["Wild Bird Feed Mixes", "Canary & Parakeet Formulations", "Livestock Protein Supplementation", "High-Calorie Animal Compound Feeds"]
+            },
+            "stripped-sunflower": {
+                "title": "Stripped Sunflower Seeds",
+                "category": "sunflower",
+                "grade": "Pioneer, Badger, Jumbo & XXL",
+                "purity": "99.0% Min",
+                "moisture": "Max 9.0%",
+                "packaging": "25kg bags, 500kg/1000kg Big Bags",
+                "description": "Offering a versatile range of striped varieties: from Pioneer and Badger for avian care, to Jumbo and XXL sizes for in-shell roasting, salting, and gourmet snacking.",
+                "longDescription": "Bulgarian striped sunflower seeds are famous for their bold contrasting stripes, plump kernel fill, and thin easily cracked hulls. We supply both calibrated feed grades (ideal for wild birds and parrots) and jumbo-calibrated snacking grades that retain unmatched crispiness when roasted.",
+                "image": "/images/site/stripped_sunflower_prod.jpg",
+                "applications": ["Roasted In-Shell Snack Packs", "Premium Wild Bird Blends", "Parrot & Exotic Pet Nutrition", "Calibrated Seed Distribution"]
+            },
+            "sunflower-crude-oil": {
+                "title": "Sunflower Crude & Refined Oil",
+                "category": "oils",
+                "grade": "Crude Degummed & Refined Edible",
+                "purity": "FFA < 2.0% (Crude), FFA < 0.1% (Refined)",
+                "moisture": "Max 0.2%",
+                "packaging": "Flexitanks (24 MT), ISO Tanks, Bulk Vessels",
+                "description": "High-yield, golden first-press crude oil and fully refined deodorized sunflower oil. Suitable for culinary frying, food packaging, and industrial processing.",
+                "longDescription": "Extracted through modern expeller pressing followed by solvent recovery, Sopreden's crude sunflower oil boasts low phosphatides, clean golden hue, and high smoke stability. We supply both crude oil for destination refineries and fully refined edible oil for bottling and commercial food production.",
+                "image": "/images/site/sunflower_crude_oil_prod.jpg",
+                "applications": ["Industrial Deep Frying & Canning", "Mayonnaise, Sauces & Dressings", "Biodiesel Feedstock Production", "Edible Oil Bottling Brands"]
             },
             "palm-oil": {
-                "title": "Palm Oil",
-                "description": "Responsible selection of palm oil products for the food industry (milk, sweets, popcorn, nuts) and bio-diesel production.",
-                "image": "/images/products/palm_oil.png"
+                "title": "Versatile Palm Oil Solutions",
+                "category": "oils",
+                "grade": "RBD Palm Oil, Olein & Stearin Fractions",
+                "purity": "Food Grade & Technical Grade",
+                "moisture": "Max 0.1%",
+                "packaging": "Flexitanks, IBC Drums (1000L), Steel Drums",
+                "description": "Responsibly sourced, RSPO-traceable palm oil solutions. Tailored for food manufacturing (confectionery, dairy, popcorn, roasting) and technical bio-diesel production.",
+                "longDescription": "Sopreden delivers a dependable supply chain of refined, bleached, and deodorized (RBD) palm oil products and specialized fractions. Our products meet strict sustainability criteria and provide consistent crystallization and melting behavior essential for chocolate spreads, commercial bakery fats, and clean-burning bio-diesel.",
+                "image": "/images/site/palm_oil_main.jpg",
+                "applications": ["Confectionery & Biscuit Fillings", "Dairy Alternatives & Margarines", "Commercial Snack Roasting & Popcorn", "Bio-Diesel & Technical Formulations"]
             }
         }
     },
     "Services": {
-        "title": "Our Services",
-        "subtitle": "Specialized solutions for your business needs.",
+        "badge": "End-to-End Commodity Services",
+        "title": "Industrial Processing & Multimodal Logistics",
+        "subtitle": "From field-level origination and optical sortex cleaning to Danube barge chartering and customs clearance, Sopreden manages every step of your commodity supply chain.",
         "items": {
             "specialized-sunflower": {
-                "title": "Specialized Sunflower Products",
-                "description": "Designed to fulfill your exact needs. From bakery-grade sunflower kernels for baking and animal feed to superior and confectionery grade varieties."
+                "title": "Specialized Sunflower Processing",
+                "summary": "State-of-the-art dehulling, optical color sorting, and precision sizing.",
+                "description": "We partner with leading regional processing plants equipped with Buhler optical sorting cameras and gravity tables. This ensures zero foreign matter, consistent calibration, and moisture stabilization for long-distance maritime transit.",
+                "icon": "Layers"
             },
             "palm-oil-solutions": {
                 "title": "Versatile Palm Oil Solutions",
-                "description": "Responsible selection of palm oil products for the food industry (milk, sweets, popcorn, nuts) and bio-diesel production."
+                "summary": "Responsible sourcing and custom fractionation for food and energy sectors.",
+                "description": "Direct allocation of high-melting-point stearins, high-stability oleins, and refined fractions. Compliant with international food regulations and renewable energy mandates.",
+                "icon": "Droplet"
             },
             "premium-seed": {
-                "title": "Premium Seed Selection",
-                "description": "Outstanding selection of 'Lady Nail' pumpkin seeds, carefully picked and treated for unbeatably high quality."
+                "title": "Premium Seed Origination",
+                "summary": "Direct-from-grower procurement with strict contract farming standards.",
+                "description": "Thanks to deep decades-long ties with Bulgarian agricultural producers, we secure premium 'Lady Nails' pumpkin and sunflower crops early in the harvest season, guaranteeing volume availability and price stability.",
+                "icon": "Sparkles"
+            },
+            "multimodal-logistics": {
+                "title": "Multimodal Logistics & Freight",
+                "summary": "Danube river barges, Black Sea vessels, and overland fleet.",
+                "description": "Positioned on the Danube river in Silistra, we orchestrate river freight to Central Europe, vessel loading via Port of Varna / Port of Constanța, and express road trucking to Western Europe, Turkey, and the Balkans.",
+                "icon": "Ship"
+            },
+            "quality-assurance": {
+                "title": "Lab Inspection & Quality Assurance",
+                "summary": "SGS/Bureau Veritas inspection, aflatoxin testing, and EU certification.",
+                "description": "Every single consignment is certified for moisture, free fatty acids (FFA), purity, aflatoxin, and heavy metal limits. Independent laboratory certificates accompany all export documentation.",
+                "icon": "ShieldCheck"
+            },
+            "trade-financing": {
+                "title": "Flexible Incoterms & Trade Execution",
+                "summary": "FOB, CIF, CFR, and DAP delivery terms with hedging options.",
+                "description": "We accommodate diverse trade structures: Letters of Credit (LC), CAD, and advance payment terms, tailored to the risk profiles and currency requirements of our global trading partners.",
+                "icon": "FileText"
             }
         }
     },
     "About": {
-        "title": "About Us",
-        "subtitle": "Learn more about Sopreden Trading.",
-        "content": "Sopreden Trading is a leading provider of high-quality seeds and oils. We are committed to sustainability and quality in every product we offer. Our dedication to excellence ensures that our customers receive only the best sunflower and pumpkin seeds, as well as responsible palm oil solutions."
+        "badge": "Our Heritage & Capabilities",
+        "title": "Decades of Grain & Seed Trading Mastery",
+        "subtitle": "Established in Silistra, at the crossroads of Europe's most fertile sunflower fields and the Danube trade artery.",
+        "content": "Sopreden Trading is an international agricultural merchant headquartered in Silistra, Bulgaria. Despite our agility and modern operational framework, our team draws from over 15 years of veteran leadership in Europe's most dynamic agribusiness conglomerates. We maintain deep strategic partnerships with the regional market leaders in sunflower processing and cultivate direct, transparent relations with independent agricultural producers across Bulgaria and the Black Sea basin.",
+        "pillars": {
+            "p1Title": "Origination Strength",
+            "p1Text": "Direct access to over 50,000 hectares of Dobrudzha sunflower and pumpkin harvest lands.",
+            "p2Title": "Flawless Execution",
+            "p2Text": "99.4% on-time delivery track record across 17 multimodal transport corridors.",
+            "p3Title": "Zero-Compromise Purity",
+            "p3Text": "Triple-screen mechanical and optical sortex cleaning for bakery and snack perfection.",
+            "p4Title": "Global Trade Desk",
+            "p4Text": "Operating across multiple time zones with rapid quotes and multilingual contract support."
+        },
+        "exportList": [
+            "Bakery Grade Sunflower Kernels",
+            "Confectionery Jumbo Sunflower Kernels",
+            "Sunflower Broken Chips (Birdfeed)",
+            "Sunflower Husk Fuel Pellets",
+            "Baked & Roasted In-Shell Seeds",
+            "Lady Nails Pumpkin Kernels & Seeds"
+        ],
+        "importList": [
+            "Raw Sunflower Seed Feedstock",
+            "Crude Vegetable Oil Fractions",
+            "Specialized Bio-Diesel Precursors"
+        ],
+        "team": {
+            "title": "Leadership & Trading Desk",
+            "subtitle": "Experienced commodities specialists dedicated to proactive communication, reliable logistics, and contract precision.",
+            "members": [
+                {
+                    "name": "Alex Nordmann",
+                    "role": "CEO & Founder",
+                    "bio": "Over 18 years in international grain origination, maritime chartering, and cross-border commodities trade.",
+                    "initials": "AN"
+                },
+                {
+                    "name": "Ella Møller",
+                    "role": "Project & Logistics Manager",
+                    "bio": "Specialist in multimodal European corridors, customs harmonization, and just-in-time container deliveries.",
+                    "initials": "EM"
+                },
+                {
+                    "name": "Sven Olsen",
+                    "role": "International Customer Relations",
+                    "bio": "Fluent in English, French, and German; managing long-term contracts across confectionery and birdfeed industries.",
+                    "initials": "SO"
+                },
+                {
+                    "name": "Cooper",
+                    "role": "Trade Desk Coordinator",
+                    "bio": "Overseeing operational documentation, certificate of origin validation, and laboratory inspection protocols.",
+                    "initials": "CO"
+                }
+            ]
+        }
     },
     "News": {
-        "title": "Latest News",
-        "subtitle": "Stay updated with the latest from Sopreden.",
+        "badge": "Agri-Market Insights",
+        "title": "Latest News & Market Intelligence",
+        "subtitle": "In-depth analysis of harvest trends, sunflower kernel pricing, sustainability benchmarks, and international trade dynamics.",
+        "readTime": "4 min read",
+        "readMore": "Read Full Article",
         "items": {
             "benefits-seeds": {
                 "title": "Discover the Benefits of Sopreden’s Premium Seed Selection",
-                "date": "2023-10-01",
-                "image": "/images/news/premium_seed_selection.jpg",
-                "content": "In the world of agriculture and food production, the quality of seeds plays a pivotal role. Sopreden, a name synonymous with excellence, offers a premium seed selection that stands out for its superior quality and numerous benefits. In this article, we delve into the advantages of choosing Sopreden’s premium seeds and why they are the preferred choice for discerning customers."
+                "date": "16 May 2023",
+                "tag": "Product Spotlight",
+                "image": "/images/site/news_seeds.jpg",
+                "excerpt": "In the world of agriculture and food production, seed quality dictates the entire value chain. Sopreden offers an elite selection that commands high acclaim across European food manufacturing.",
+                "content": "In the world of agriculture and modern food production, the biological and physical quality of seeds plays a decisive role. Sopreden, a name synonymous with purity and trade reliability, offers a premium seed selection that stands out for its high oil content, low aflatoxin levels, and remarkable uniformity.\n\nFrom our prized 'Lady Nails' pumpkin seeds—loaded with plant-based protein, dietary fiber, and essential minerals—to our calibrated bakery-grade sunflower kernels, our clients benefit from lower processing scrap, enhanced flavor profiles, and consistent baking behavior. We trace each lot directly to certified agricultural holdings, ensuring full compliance with EU contaminant and pesticide thresholds."
             },
             "sustainability-palm-oil": {
                 "title": "Sopreden’s Commitment to Sustainability: A Look into Our Palm Oil Production",
-                "date": "2023-09-15",
-                "image": "/images/news/palm_oil_news.jpg",
-                "content": "In an era where sustainability is not just a buzzword but a necessity, Sopreden is proud to highlight its unwavering commitment to responsible and sustainable practices, particularly in our palm oil production. As a leading provider of high-quality agricultural products, including palm oil, we understand the importance of balancing economic growth with environmental stewardship and social responsibility."
+                "date": "16 May 2023",
+                "tag": "Sustainability & ESG",
+                "image": "/images/site/news_palm_oil.png",
+                "excerpt": "Sustainability is no longer a corporate buzzword—it is an economic imperative. Discover how Sopreden ensures responsible sourcing and verifiable traceability.",
+                "content": "In an era where sustainability is an essential prerequisite for global food and energy trade, Sopreden is proud to highlight its unwavering commitment to responsible sourcing and environmental stewardship.\n\nOur palm oil fractions are sourced exclusively from certified mills that enforce zero-deforestation policies, protect high carbon stock peatlands, and champion fair labor standards. Whether intended for confectionery fillings, bakery emulsifiers, or renewable bio-diesel production, our customers receive comprehensive documentation confirming full chain-of-custody compliance."
             },
             "sunflower-kernel-bakery": {
                 "title": "Sopreden’s Sunflower Kernel Bakery Grade: A New Favorite in the Baking Industry",
-                "date": "2023-08-20",
-                "image": "/images/news/sunflower_bakery_news.jpg",
-                "content": "The baking industry is constantly evolving, with bakers and food manufacturers always on the lookout for high-quality ingredients that can elevate their products. Sopreden, a trusted name in agricultural products, has recently introduced its Sunflower Kernel Bakery Grade, which is quickly becoming a new favorite in the baking world."
+                "date": "16 May 2023",
+                "tag": "Bakery Industry",
+                "image": "/images/site/news_bakery.jpg",
+                "excerpt": "Commercial bakeries demand kernels that don't scorch in industrial ovens and maintain crunchiness in multi-grain loaves. Here is why bakers choose Sopreden.",
+                "content": "The commercial baking sector is continuously raising quality benchmarks. Industrial bakers and artisan pastry houses seek ingredients that elevate loaf aesthetics without adding processing headaches. Sopreden's Bakery Grade Sunflower Kernels have quickly emerged as an industry staple across Germany, France, and Scandinavia.\n\nSorted by dual-pass color cameras to eliminate broken particles and hull specks, our bakery kernels offer uniform count-per-ounce, optimal moisture retention, and resilient crunch that survives high-temperature baking and freezing cycles."
             },
             "sunflower-crude-oil": {
                 "title": "Sopreden Introduces Sunflower Crude Oil to Its Product Line",
-                "date": "2023-07-10",
-                "image": "/images/news/sunflower_crude_oil.jpg",
-                "content": "Exciting news from the world of agribusiness! Sopreden, a leading provider of premium sunflower products, palm oil, and pumpkin seeds, has recently announced a significant expansion of its product lineup. The latest addition? Sunflower Crude Oil – a versatile, high-quality product that promises to deliver in…"
+                "date": "16 May 2023",
+                "tag": "Commodity Expansion",
+                "image": "/images/site/news_crude_oil.jpg",
+                "excerpt": "Agribusiness expansion announcement: Sopreden scales its portfolio with high-yield Sunflower Crude Oil tailored for refineries and industrial users.",
+                "content": "Exciting news from our trading desk: Sopreden has formalized long-term crushing and supply contracts to add Sunflower Crude Oil (First Press & Solvent Extracted) to its official commodity lineup.\n\nWith high oleic and linoleic variations available, our crude oil boasts a phosphorus content below 15 ppm, minimal free fatty acids (FFA < 1.75%), and exceptional clarity. We offer deliveries in 24,000-liter sanitary flexitanks, dedicated road tank trailers, and coastal vessel cargo lots from Black Sea and Danube river ports."
             }
         }
     },
-    "Contact": {}
+    "Contact": {
+        "badge": "24/7 Global Trading Desk",
+        "title": "Let's Plan Your Next Commodity Trade",
+        "subtitle": "Due to time zone differences across our global client base, our trading team is on standby to answer volume inquiries, deliver binding price quotes, and coordinate logistics.",
+        "talkSales": "Talk to Sales",
+        "talkSalesSub": "Direct trading desk access for binding contracts & spot allocations.",
+        "chatWhatsApp": "WhatsApp Fast Connect",
+        "chatWhatsAppSub": "Instant mobile contact with our commercial traders.",
+        "formTitle": "Request a Quote / Send an Inquiry",
+        "formSubtitle": "Fill in your specifications below. You will receive an official response within 4 business hours.",
+        "info": {
+            "address": "Docho Mihaylov 1, 7500 Silistra, Bulgaria",
+            "phone": "+359 89 541 1947",
+            "email": "contact@sopreden.com",
+            "hours": "Monday - Friday: 08:00 - 17:00 (EET / UTC+2)"
+        },
+        "form": {
+            "name": "Your Full Name / Company",
+            "namePlaceholder": "e.g. John Smith (ABC Commodities Ltd.)",
+            "email": "Business Email",
+            "emailPlaceholder": "name@company.com",
+            "phone": "Phone / WhatsApp",
+            "phonePlaceholder": "+49 123 456789",
+            "product": "Product of Interest",
+            "quantity": "Estimated Quantity (Metric Tons)",
+            "incoterm": "Preferred Incoterm (FOB, CIF, CFR, DAP)",
+            "message": "Message / Specific Requirements",
+            "messagePlaceholder": "Please specify target delivery port, packaging preference (25kg bags, Big Bags, Bulk), and delivery timeframe...",
+            "submit": "Submit Trade Inquiry",
+            "submitting": "Transmitting to Trading Desk...",
+            "success_message": "Thank you! Your trade inquiry has been received. A Sopreden commodity trader will contact you shortly with price indications and availability.",
+            "error_missing_fields": "Please provide your name, business email, and requirements.",
+            "error_sending_failed": "Unable to dispatch message at this time. Please call or message us directly via WhatsApp at +359 89 541 1947.",
+            "error_generic": "An unexpected network error occurred. Please reach out to contact@sopreden.com directly."
+        }
+    },
+    "QuoteModal": {
+        "title": "Instant Commodity RFQ Builder",
+        "subtitle": "Select your specifications to generate a prompt trading quotation.",
+        "step1": "1. Select Commodity",
+        "step2": "2. Quantity & Incoterms",
+        "step3": "3. Delivery & Contact Details",
+        "generateQuote": "Generate Official Quote",
+        "success": "Quote Request Generated!"
+    },
+    "Footer": {
+        "description": "Sopreden Trading is a licensed international agricultural merchant. Sourcing premium seeds and vegetable oils from European agricultural centers with multimodal delivery to 257+ global destinations.",
+        "quickLinks": "Quick Links",
+        "commodities": "Core Commodities",
+        "contactInfo": "Headquarters & Logistics",
+        "legal": "Privacy Policy • Terms of Trade • GAFTA / FOSFA Standards",
+        "hoursNotice": "Trading desk operational Monday through Friday 08:00 - 17:00 EET."
+    }
 }

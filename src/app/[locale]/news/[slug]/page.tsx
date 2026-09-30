@@ -1,48 +1,184 @@
-import { useTranslations } from 'next-intl';
+'use client';
+
+import Image from 'next/image';
+import { notFound, useParams } from 'next/navigation';
+import { Link } from '@/i18n/routing';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
-import Image from 'next/image';
-import { notFound } from 'next/navigation';
+import { Calendar, Clock, ChevronRight, ArrowLeft, Share2, Tag, ArrowRight } from 'lucide-react';
 
-export default async function NewsDetailPage({ params }: { params: Promise<{ slug: string }> }) {
-    const { slug } = await params;
+interface ArticleData {
+    title: string;
+    date: string;
+    tag: string;
+    readTime: string;
+    image: string;
+    content: string[];
+    relatedSlug: string;
+    relatedTitle: string;
+}
 
-    const validSlugs = ['benefits-seeds', 'sustainability-palm-oil', 'sunflower-kernel-bakery', 'sunflower-crude-oil'];
+const articlesData: Record<string, ArticleData> = {
+    'benefits-seeds': {
+        title: 'Discover the Benefits of Sopreden’s Premium Seed Selection',
+        date: '16 May 2023',
+        tag: 'Product Spotlight',
+        readTime: '4 min read',
+        image: '/images/site/news_seeds.jpg',
+        content: [
+            'In the world of agriculture and modern food production, seed quality dictates the entire value chain. Sopreden, a name synonymous with excellence, offers a premium seed selection that stands out for its superior purity, uniform moisture calibration, and outstanding nutritional density.',
+            'Our flagship selection centers on Bulgarian-grown "Lady Nails" pumpkin seeds and high-oil hybrid sunflower seeds. By working hand-in-hand with leading agricultural cooperatives across the Dobrudzha plain, we ensure that every seed lot is cultivated under strict European agronomic standards with zero harmful chemical residues.',
+            'For commercial food producers, bakers, and snack roasters, choosing Sopreden translates directly into tangible manufacturing advantages: lower broken rates, higher oven yield, crisp texture retention, and complete batch-to-batch consistency.',
+            'Furthermore, our products are checked for microbiological safety, moisture thresholds (< 7%), and heavy metals by independent inspection authorities (SGS / Bureau Veritas) prior to export.'
+        ],
+        relatedSlug: 'sunflower-kernel-bakery',
+        relatedTitle: 'Sopreden’s Sunflower Kernel Bakery Grade: A New Favorite in the Baking Industry'
+    },
+    'sustainability-palm-oil': {
+        title: 'Sopreden’s Commitment to Sustainability: A Look into Our Palm Oil Production',
+        date: '16 May 2023',
+        tag: 'ESG & Sustainability',
+        readTime: '5 min read',
+        image: '/images/site/news_palm_oil.png',
+        content: [
+            'In an era where environmental stewardship is not merely a marketing claim but an indispensable commercial requirement, Sopreden Trading is proud to emphasize its unwavering dedication to responsible palm oil sourcing and supply chain transparency.',
+            'Palm oil remains one of the world’s most versatile vegetable lipids, delivering unmatched thermal stability, neutral flavor, and efficient yield per hectare. However, safeguarding tropical ecosystems and biodiversity requires rigorous chain-of-custody protocols.',
+            'Sopreden works exclusively with accredited mills that adhere to the Roundtable on Sustainable Palm Oil (RSPO) principles. Our partners operate under strict No Deforestation, No Peat, No Exploitation (NDPE) policies, providing full traceability back to point of origination.',
+            'Whether allocated for industrial biscuit cream fillings, confectionery spreads, or clean-burning European bio-diesel refining, our palm oil solutions enable industrial clients to satisfy stringent EU ESG and deforestation-free supply chain mandates.'
+        ],
+        relatedSlug: 'sunflower-crude-oil',
+        relatedTitle: 'Sopreden Introduces Sunflower Crude Oil to Its Product Line'
+    },
+    'sunflower-kernel-bakery': {
+        title: 'Sopreden’s Sunflower Kernel Bakery Grade: A New Favorite in the Baking Industry',
+        date: '16 May 2023',
+        tag: 'Bakery Industry',
+        readTime: '3 min read',
+        image: '/images/site/news_bakery.jpg',
+        content: [
+            'The industrial and artisanal baking sector is constantly evolving, with master bakers seeking premium seeds that retain their signature golden color, pleasant nuttiness, and distinctive crunch through demanding dough proofing and high-temperature oven baking.',
+            'Sopreden has introduced a specialized Bakery Grade Sunflower Kernel specification specifically engineered for European bakeries. Unlike generic commodity seeds, our bakery grade undergoes dual optical Sortex screening to eliminate husk particles, dust, and undersized kernels.',
+            'The result is a uniform count-per-ounce seed with low moisture content (< 7%) that resists rancidity and prevents surface scorching on artisan loaves, bagels, and seed-crusted rye rolls.',
+            'Packaged in multi-wall kraft paper bags with food-grade protective liners or 1000kg Big Bags, our bakery kernels are supplied on demand across Germany, France, the Benelux region, and the UK.'
+        ],
+        relatedSlug: 'benefits-seeds',
+        relatedTitle: 'Discover the Benefits of Sopreden’s Premium Seed Selection'
+    },
+    'sunflower-crude-oil': {
+        title: 'Sopreden Introduces Sunflower Crude Oil to Its Product Line',
+        date: '16 May 2023',
+        tag: 'Commodity Expansion',
+        readTime: '4 min read',
+        image: '/images/site/news_crude_oil.jpg',
+        content: [
+            'Sopreden Trading is pleased to announce a strategic expansion of its liquid commodities portfolio with the official launch of Sunflower Crude Oil (First Press Expeller & Solvent Extracted) for European and global markets.',
+            'Leveraging strong ties with premier crushing facilities in Bulgaria’s Northeast sunflower belt, we now supply consistent volumes of high-yielding crude sunflower oil with free fatty acid levels strictly under 2.0% and phosphorus content below 15 ppm.',
+            'We provide versatile logistics structures including dedicated 24,000-liter sanitary flexitank containers, food-grade road tankers, and coastal vessel parcel chartering from Danube and Black Sea ports (Port of Varna and Port of Constanța).',
+            'Our commercial desk is currently quoting spot cargo allocations and structured quarterly forward contracts under FOSFA standard delivery terms.'
+        ],
+        relatedSlug: 'sustainability-palm-oil',
+        relatedTitle: 'Sopreden’s Commitment to Sustainability: A Look into Our Palm Oil Production'
+    }
+};
 
-    if (!validSlugs.includes(slug)) {
+export default function NewsDetailPage() {
+    const params = useParams();
+    const slug = params?.slug as string;
+
+    const article = articlesData[slug];
+
+    if (!article) {
         notFound();
     }
 
     return (
-        <NewsDetailContent slug={slug} />
-    );
-}
-
-function NewsDetailContent({ slug }: { slug: string }) {
-    const t = useTranslations('News');
-
-    return (
-        <div className="flex min-h-screen flex-col bg-white text-black">
+        <div className="flex min-h-screen flex-col bg-white text-gray-900 selection:bg-[#004d51] selection:text-white">
             <Header />
-            <main className="flex-1 py-12">
-                <div className="container mx-auto max-w-4xl px-4">
-                    <div className="mb-8">
-                        <div className="mb-4 text-sm font-medium text-gray-500">{t(`items.${slug}.date`)}</div>
-                        <h1 className="mb-6 text-4xl font-bold tracking-tighter">{t(`items.${slug}.title`)}</h1>
+
+            <main className="flex-1 py-10 lg:py-16">
+                <article className="container mx-auto px-4 sm:px-6 max-w-4xl">
+                    {/* Breadcrumbs */}
+                    <nav className="flex items-center space-x-2 text-xs text-gray-500 mb-6">
+                        <Link href="/" className="hover:text-[#004d51] transition-colors">Home</Link>
+                        <ChevronRight className="h-3 w-3 text-gray-400" />
+                        <Link href="/news" className="hover:text-[#004d51] transition-colors">News</Link>
+                        <ChevronRight className="h-3 w-3 text-gray-400" />
+                        <span className="font-semibold text-gray-900 truncate max-w-xs">{article.title}</span>
+                    </nav>
+
+                    {/* Metadata Header */}
+                    <div className="space-y-4 mb-8">
+                        <div className="flex flex-wrap items-center gap-3">
+                            <span className="inline-flex items-center gap-1.5 rounded-full bg-teal-50 px-3 py-1 text-xs font-bold text-[#004d51] border border-teal-100">
+                                <Tag className="h-3 w-3" />
+                                {article.tag}
+                            </span>
+                            <span className="text-xs text-gray-500 flex items-center gap-1.5 font-medium">
+                                <Calendar className="h-3.5 w-3.5 text-amber-500" />
+                                {article.date}
+                            </span>
+                            <span className="text-xs text-gray-500 flex items-center gap-1.5">
+                                <Clock className="h-3.5 w-3.5" />
+                                {article.readTime}
+                            </span>
+                        </div>
+
+                        <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-gray-900 leading-tight">
+                            {article.title}
+                        </h1>
+
+                        <div className="text-sm font-semibold text-gray-500">
+                            Published by <span className="text-[#004d51] font-bold">Sopreden Commodity Desk</span>, Silistra
+                        </div>
                     </div>
-                    <div className="relative mb-12 aspect-video w-full overflow-hidden rounded-lg bg-gray-100">
+
+                    {/* Hero Image */}
+                    <div className="relative aspect-16/9 w-full overflow-hidden rounded-3xl bg-gray-100 shadow-xl mb-10 border border-gray-200">
                         <Image
-                            src={t(`items.${slug}.image`)}
-                            alt={t(`items.${slug}.title`)}
+                            src={article.image}
+                            alt={article.title}
                             fill
+                            priority
                             className="object-cover"
                         />
                     </div>
-                    <div className="prose prose-lg max-w-none text-gray-700">
-                        <p>{t(`items.${slug}.content`)}</p>
+
+                    {/* Article Body */}
+                    <div className="prose prose-lg max-w-none text-gray-700 space-y-6 leading-relaxed text-base sm:text-lg">
+                        {article.content.map((paragraph, index) => (
+                            <p key={index}>{paragraph}</p>
+                        ))}
                     </div>
-                </div>
+
+                    {/* Next article link */}
+                    <div className="mt-14 pt-8 border-t border-gray-200">
+                        <div className="text-xs font-bold uppercase tracking-wider text-gray-400 mb-2">
+                            Next Market Article:
+                        </div>
+                        <Link
+                            href={`/news/${article.relatedSlug}`}
+                            className="group flex items-center justify-between p-5 rounded-2xl bg-slate-50 border border-slate-200 hover:border-[#004d51] hover:bg-teal-50/50 transition-all"
+                        >
+                            <span className="text-base font-bold text-gray-900 group-hover:text-[#004d51] transition-colors">
+                                {article.relatedTitle}
+                            </span>
+                            <ArrowRight className="h-5 w-5 text-[#004d51] shrink-0 transition-transform group-hover:translate-x-1" />
+                        </Link>
+                    </div>
+
+                    {/* Back to news */}
+                    <div className="mt-8 text-center">
+                        <Link
+                            href="/news"
+                            className="inline-flex items-center gap-2 text-sm font-bold text-[#004d51] hover:underline"
+                        >
+                            <ArrowLeft className="h-4 w-4" />
+                            <span>Return to All Market News</span>
+                        </Link>
+                    </div>
+                </article>
             </main>
+
             <Footer />
         </div>
     );
