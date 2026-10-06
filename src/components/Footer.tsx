@@ -26,6 +26,7 @@ export default function Footer() {
     const quickLinks = [
         { name: nav('home'), href: '/' },
         { name: nav('products'), href: '/products' },
+        { name: 'Dehulling Factory', href: '/factory' },
         { name: nav('services'), href: '/services' },
         { name: nav('about'), href: '/about' },
         { name: nav('news'), href: '/news' },
@@ -76,14 +77,13 @@ export default function Footer() {
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10">
                     {/* Brand Info */}
                     <div className="lg:col-span-4 space-y-5">
-                        <div className="relative h-12 w-40">
-                            <Image
-                                src="/images/site/logo.png"
-                                alt="Sopreden Trading"
-                                fill
-                                className="object-contain brightness-0 invert"
-                            />
-                        </div>
+                        <Image
+                            src="/images/site/logo.png"
+                            alt="Sopreden Trading"
+                            width={88}
+                            height={55}
+                            className="h-12 w-auto object-contain brightness-0 invert"
+                        />
                         <p className="text-sm leading-relaxed text-gray-400 pr-4">
                             {t('description')}
                         </p>

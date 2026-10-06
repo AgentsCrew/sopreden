@@ -10,7 +10,7 @@ export default function ServicesShowcase() {
             icon: Layers,
             title: 'Specialized Sunflower Processing',
             desc: 'Multi-stage dehulling, gravity separation, and high-precision Buhler optical sorting to achieve 99.9% kernel purity for bakery and confectionery clients.',
-            image: '/images/site/store.jpg',
+            image: '/images/site/sunflower_bakery_premium.jpg',
             highlight: 'Sortex Optical Technology'
         },
         {
@@ -87,6 +87,7 @@ export default function ServicesShowcase() {
                                         src={srv.image}
                                         alt={srv.title}
                                         fill
+                                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                                         className="object-cover transition-transform duration-500 group-hover:scale-105 opacity-80 group-hover:opacity-100"
                                     />
                                     <div className="absolute inset-0 bg-gradient-to-t from-[#00383b] via-transparent to-black/30" />
@@ -130,17 +131,17 @@ export default function ServicesShowcase() {
                     </div>
                     <div className="flex flex-wrap items-center gap-3 shrink-0">
                         <Link
+                            href="/factory"
+                            className="inline-flex items-center gap-2 rounded-xl bg-teal-500/20 border border-teal-400/40 px-5 py-3 text-sm font-semibold text-teal-200 hover:bg-teal-500/30 transition-colors"
+                        >
+                            <span>Dehulling Plant Tour</span>
+                        </Link>
+                        <Link
                             href="/contact"
                             className="inline-flex items-center gap-2 rounded-xl bg-amber-400 px-6 py-3 text-sm font-bold text-gray-950 shadow-md hover:bg-amber-300 transition-colors"
                         >
                             <span>Contact Trading Desk</span>
                             <ArrowRight className="h-4 w-4" />
-                        </Link>
-                        <Link
-                            href="/services"
-                            className="inline-flex items-center gap-2 rounded-xl bg-white/10 border border-white/20 px-5 py-3 text-sm font-semibold text-white hover:bg-white/20 transition-colors"
-                        >
-                            <span>Detailed Logistics Guide</span>
                         </Link>
                     </div>
                 </div>

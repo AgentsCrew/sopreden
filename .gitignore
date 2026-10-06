@@ -23,6 +23,7 @@
 # misc
 .DS_Store
 *.pem
+/Sopreden dehuling.mp4
 
 # debug
 npm-debug.log*

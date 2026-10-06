@@ -110,6 +110,32 @@ export default function ServicesPage() {
                     </div>
                 </section>
 
+                {/* Dehulling Facility Callout Banner */}
+                <section className="py-14 bg-gradient-to-r from-[#011a1c] via-[#00383b] to-[#004d51] text-white">
+                    <div className="container mx-auto px-4 sm:px-6">
+                        <div className="flex flex-col md:flex-row items-center justify-between gap-6 max-w-5xl mx-auto">
+                            <div className="space-y-2 text-center md:text-left">
+                                <div className="text-xs font-bold uppercase tracking-wider text-amber-300">
+                                    Dedicated Processing Infrastructure
+                                </div>
+                                <h3 className="text-2xl sm:text-3xl font-extrabold tracking-tight">
+                                    Boutique Dehulling & Optical Sorting Plant
+                                </h3>
+                                <p className="text-sm text-teal-100/90 max-w-xl">
+                                    Discover how our 6-stage centrifugal impact dehulling and Sortex optical cleaning line produces 99.9% clean bakery and confectionery sunflower kernels.
+                                </p>
+                            </div>
+                            <Link
+                                href="/factory"
+                                className="shrink-0 inline-flex items-center gap-2 rounded-xl bg-amber-400 px-6 py-3.5 text-sm font-bold text-gray-950 shadow-md hover:bg-amber-300 transition-colors"
+                            >
+                                <span>Explore Dehulling Plant</span>
+                                <ArrowRight className="h-4 w-4" />
+                            </Link>
+                        </div>
+                    </div>
+                </section>
+
                 {/* CTA Section */}
                 <section className="py-16 bg-[#00383b] text-white">
                     <div className="container mx-auto px-4 sm:px-6 text-center max-w-2xl space-y-5">

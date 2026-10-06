@@ -42,9 +42,10 @@ export default function NaturalIngredientsSection() {
                             {/* Base card with facility photography */}
                             <div className="relative aspect-4/3 w-full overflow-hidden rounded-3xl shadow-2xl border border-gray-100 bg-gray-100">
                                 <Image
-                                    src="/images/site/store.jpg"
-                                    alt="Sopreden Grain Sourcing & Warehousing"
+                                    src="/images/site/about_facility.jpg"
+                                    alt="Sopreden Silistra Grain Processing & Warehousing Center"
                                     fill
+                                    sizes="(max-width: 1024px) 100vw, 500px"
                                     className="object-cover"
                                 />
                                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
@@ -59,11 +60,12 @@ export default function NaturalIngredientsSection() {
                             </div>
 
                             {/* Floating Seed Bowl Cutout */}
-                            <div className="absolute -bottom-10 -right-6 sm:-right-8 w-44 sm:w-56 aspect-square filter drop-shadow-2xl transition-transform hover:scale-105 duration-300">
+                            <div className="absolute -bottom-8 -right-4 sm:-right-8 w-44 sm:w-56 aspect-square filter drop-shadow-2xl transition-transform hover:scale-105 duration-300 pointer-events-none">
                                 <Image
                                     src="/images/site/sunflower_bowl.png"
                                     alt="Pure Sunflower Seeds"
                                     fill
+                                    sizes="(max-width: 640px) 176px, 224px"
                                     className="object-contain"
                                 />
                             </div>

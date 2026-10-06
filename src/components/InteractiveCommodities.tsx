@@ -33,7 +33,7 @@ const products: ProductItem[] = [
         packaging: '25kg PP bags, Big Bags (1000kg)',
         description: "We specialize in the renowned 'Lady Nails' variety. Characterized by uniform elongated shape, rich nutty aroma, and high zinc/magnesium density.",
         longDescription: "Sopreden's 'Lady Nails' pumpkin seeds represent the pinnacle of European seed cultivation. Grown in nutrient-rich soils, each batch is mechanically dehulled, optically sorted by laser color cameras, and packed in nitrogen-flushed or heavy-duty woven bags.",
-        image: '/images/site/pumpkin_kernel.jpg',
+        image: '/images/products/pumpkin_seeds.png',
         applications: ['Artisanal Bakery & Confectionery', 'Roasted & Salted Snack Packs', 'Dietary Supplements & Granola', 'Cold-Pressed Pumpkin Seed Oil']
     },
     {
@@ -47,7 +47,7 @@ const products: ProductItem[] = [
         packaging: '25kg craft paper bags, Big Bags',
         description: 'Available in Bakery Grade and distinguished Confectionery Grade (Jumbo and XXL). Expertly sorted, 99.9% clean, uniform color, and free from bitter aftertaste.',
         longDescription: 'Our flagship sunflower kernels are celebrated among European master bakers and multinational snack conglomerates. Sourced from high-yielding oil and confection hybrid varieties with multi-stage Sortex optical sorting.',
-        image: '/images/site/sunflower_confectionery.jpg',
+        image: '/images/products/sunflower_kernels.png',
         applications: ['Artisanal Bread & Multi-grain Buns', 'Energy Bars & Healthy Snacks', 'Pralines & Pastry Fillings', 'Direct Consumption Snack Industry']
     },
     {
@@ -61,7 +61,7 @@ const products: ProductItem[] = [
         packaging: 'Bulk, Big Bags, 25kg/40kg bags',
         description: 'A high-nutrient broken kernel derivative obtained during dehulling. Rich in essential vegetable lipids and protein, serving as the gold standard for birdfeed.',
         longDescription: 'Sunflower chips consist of clean, broken sunflower meat separated during mechanical dehulling. Contains the full caloric and protein profile of intact kernels at a favorable price point.',
-        image: '/images/site/sunflower_chips_prod.jpg',
+        image: '/images/products/sunflower_chips.png',
         applications: ['Wild Bird Feed Mixes', 'Canary & Parakeet Formulations', 'Livestock Protein Supplementation', 'High-Calorie Compound Feeds']
     },
     {
@@ -75,7 +75,7 @@ const products: ProductItem[] = [
         packaging: '25kg bags, 500kg/1000kg Big Bags',
         description: 'Offering a versatile range of striped varieties: from Pioneer and Badger for avian care, to Jumbo and XXL sizes for in-shell roasting and snacking.',
         longDescription: 'Bulgarian striped sunflower seeds are famous for their bold contrasting stripes, plump kernel fill, and thin easily cracked hulls. We supply calibrated feed grades and jumbo snacking grades.',
-        image: '/images/site/stripped_sunflower_prod.jpg',
+        image: '/images/products/stripped_sunflower.png',
         applications: ['Roasted In-Shell Snack Packs', 'Premium Wild Bird Blends', 'Parrot & Exotic Pet Nutrition', 'Calibrated Seed Distribution']
     },
     {
@@ -103,7 +103,7 @@ const products: ProductItem[] = [
         packaging: 'Flexitanks, IBC Drums (1000L), Steel Drums',
         description: 'Responsibly sourced, RSPO-traceable palm oil solutions. Tailored for food manufacturing (confectionery, dairy, popcorn) and technical bio-diesel production.',
         longDescription: 'Sopreden delivers a dependable supply chain of refined, bleached, and deodorized (RBD) palm oil products and specialized fractions with consistent melting behavior.',
-        image: '/images/site/palm_oil_main.jpg',
+        image: '/images/products/palm_oil.png',
         applications: ['Confectionery & Biscuit Fillings', 'Dairy Alternatives & Margarines', 'Commercial Snack Roasting & Popcorn', 'Bio-Diesel & Technical Formulations']
     }
 ];
@@ -170,11 +170,12 @@ export default function InteractiveCommodities() {
                             className="group relative flex flex-col overflow-hidden rounded-2xl bg-white border border-gray-200/80 shadow-xs hover:shadow-xl hover:border-teal-500/40 transition-all duration-300"
                         >
                             {/* Product Image */}
-                            <div className="relative aspect-4/3 w-full overflow-hidden bg-gray-100">
+                            <div className="relative aspect-square w-full overflow-hidden bg-slate-50">
                                 <Image
                                     src={item.image}
                                     alt={item.title}
                                     fill
+                                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                                     className="object-cover transition-transform duration-500 group-hover:scale-105"
                                 />
                                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-60 group-hover:opacity-40 transition-opacity" />

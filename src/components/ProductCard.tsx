@@ -13,11 +13,12 @@ export default function ProductCard({ title, description, link, image }: Product
     return (
         <Link href={link} className="group flex flex-col overflow-hidden rounded-2xl border border-gray-200/80 bg-white shadow-xs transition-all hover:shadow-xl hover:border-teal-500/40">
             {image && (
-                <div className="relative aspect-4/3 w-full overflow-hidden bg-gray-100">
+                <div className="relative aspect-square w-full overflow-hidden bg-slate-50">
                     <Image
                         src={image}
                         alt={title}
                         fill
+                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                         className="object-cover transition-transform duration-500 group-hover:scale-105"
                     />
                 </div>

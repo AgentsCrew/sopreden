@@ -37,7 +37,7 @@ const productsData: Record<string, ProductData> = {
         shelfLife: '12 Months (stored in dry, cool conditions < 18°C)',
         description: "We specialize in the renowned 'Lady Nails' variety. Characterized by uniform elongated shape, rich nutty aroma, and high zinc/magnesium density.",
         longDescription: "Sopreden's 'Lady Nails' pumpkin seeds represent the pinnacle of European seed cultivation. Grown in nutrient-rich soils in Northeast Bulgaria, each batch is mechanically dehulled, optically sorted by laser color cameras, and packed in nitrogen-flushed or heavy-duty woven bags. High in natural unsaturated fatty acids, proteins, and essential minerals, they are ideal for roasted snack lines, muesli blends, and cold-pressed botanical oils.",
-        image: '/images/site/pumpkin_kernel.jpg',
+        image: '/images/products/pumpkin_seeds.png',
         applications: [
             'Artisanal Bakery & Specialty Loaves',
             'Roasted, Salted & Seasoned Consumer Snack Packs',
@@ -65,7 +65,7 @@ const productsData: Record<string, ProductData> = {
         shelfLife: '12 Months in dry, ventilated storage (< 20°C)',
         description: 'Available in Bakery Grade and distinguished Confectionery Grade (Jumbo and XXL). Expertly sorted, 99.9% clean, uniform color, and free from bitter aftertaste.',
         longDescription: 'Our flagship sunflower kernels are celebrated among European master bakers and multinational snack conglomerates. Sourced from high-yielding oil and confection hybrid varieties, seeds undergo multi-stage hulling, aspiration, gravity separation, and Buhler Sortex optical sorting. The result is pure, undamaged kernels with exceptional shelf life and crisp texture.',
-        image: '/images/site/sunflower_confectionery.jpg',
+        image: '/images/products/sunflower_kernels.png',
         applications: [
             'Artisanal Bread, Rolls & Multi-grain Buns',
             'Nut & Seed Energy Clusters, Granola & Bars',
@@ -93,7 +93,7 @@ const productsData: Record<string, ProductData> = {
         shelfLife: '9 Months in ventilated storage',
         description: 'A high-nutrient broken kernel derivative obtained during the dehulling process. Rich in essential vegetable lipids and protein, serving as the gold standard for birdfeed.',
         longDescription: 'Sunflower chips consist of clean, broken sunflower meat separated during the mechanical dehulling phase. Because they contain the full caloric, lipid, and protein profile of intact kernels at a favorable price point, they are highly sought after by commercial feed mills and bird-food packagers worldwide.',
-        image: '/images/site/sunflower_chips_prod.jpg',
+        image: '/images/products/sunflower_chips.png',
         applications: [
             'Wild Bird Winter Feeding Blends & Suet Cakes',
             'Canary, Parakeet & Pet Bird Formulations',
@@ -120,7 +120,7 @@ const productsData: Record<string, ProductData> = {
         shelfLife: '12 Months',
         description: 'Offering a versatile range of striped varieties: from Pioneer and Badger for avian care, to Jumbo and XXL sizes for in-shell roasting, salting, and gourmet snacking.',
         longDescription: 'Bulgarian striped sunflower seeds are famous for their bold contrasting stripes, plump kernel fill, and thin easily cracked hulls. We supply both calibrated feed grades (ideal for wild birds and parrots) and jumbo-calibrated snacking grades that retain unmatched crispiness when roasted.',
-        image: '/images/site/stripped_sunflower_prod.jpg',
+        image: '/images/products/stripped_sunflower.png',
         applications: [
             'Roasted In-Shell Consumer Snack Packs',
             'Premium Wild Bird Food Mixtures',
@@ -173,7 +173,7 @@ const productsData: Record<string, ProductData> = {
         shelfLife: '24 Months in cool, ambient storage',
         description: 'Responsibly sourced, RSPO-traceable palm oil solutions. Tailored for food manufacturing (confectionery, dairy, popcorn, roasting) and technical bio-diesel production.',
         longDescription: 'Sopreden delivers a dependable supply chain of refined, bleached, and deodorized (RBD) palm oil products and specialized fractions. Our products meet strict sustainability criteria and provide consistent crystallization and melting behavior essential for chocolate spreads, commercial bakery fats, and clean-burning bio-diesel.',
-        image: '/images/site/palm_oil_main.jpg',
+        image: '/images/products/palm_oil.png',
         applications: [
             'Confectionery Fats & Chocolate Spread Fillings',
             'Dairy Alternatives, Shortenings & Margarines',
@@ -224,12 +224,13 @@ export default function ProductDetailPage() {
                     <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
                         {/* Left: Product Imagery & Certifications */}
                         <div className="lg:col-span-5 space-y-6">
-                            <div className="relative aspect-4/3 sm:aspect-square w-full overflow-hidden rounded-3xl bg-gray-100 border border-gray-200 shadow-xl">
+                            <div className="relative aspect-square w-full overflow-hidden rounded-3xl bg-slate-50 border border-gray-200 shadow-xl">
                                 <Image
                                     src={product.image}
                                     alt={product.title}
                                     fill
                                     priority
+                                    sizes="(max-width: 1024px) 100vw, 500px"
                                     className="object-cover"
                                 />
                                 <div className="absolute top-4 left-4">

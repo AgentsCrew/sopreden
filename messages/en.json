@@ -22,6 +22,7 @@
     "Navigation": {
         "home": "Home",
         "products": "Our Products",
+        "factory": "Dehulling Plant",
         "services": "Services & Logistics",
         "about": "About Us",
         "news": "Market News",
@@ -342,6 +343,102 @@
             "error_missing_fields": "Please provide your name, business email, and requirements.",
             "error_sending_failed": "Unable to dispatch message at this time. Please call or message us directly via WhatsApp at +359 89 541 1947.",
             "error_generic": "An unexpected network error occurred. Please reach out to contact@sopreden.com directly."
+        }
+    },
+    "Factory": {
+        "badge": "Specialized Mechanical Dehulling Line • Silistra, Bulgaria",
+        "title": "Boutique Dehulling & Optical Sorting Facility",
+        "subtitle": "Where mechanical engineering meets agricultural purity. Inside Sopreden's specialized seed dehulling plant, turning raw European sunflower and pumpkin harvests into 99.9% pure, undamaged kernels.",
+        "videoTitle": "Real Industrial Dehulling in Action",
+        "videoSubtitle": "Watch our centrifugal impact dehulling and negative-pressure aspiration system processing high-grade sunflower kernels at our Silistra facility.",
+        "boutiqueAdvantage": {
+            "title": "The Boutique Advantage — Why Precision Dehulling Outperforms Mega-Crushers",
+            "subtitle": "Unlike industrial mega-crushers that grind and pulverize seeds purely for crude oil extraction, Sopreden’s specialized facility is engineered exclusively for human-grade kernel preservation.",
+            "points": [
+                {
+                    "title": "Gentle Kinetic Impact vs. Destructive Grinding",
+                    "description": "Our calibrated centrifugal rotors crack the outer fibrous pericarp without shattering the fragile inner seed embryo, preserving natural shape, crunch, and nutritional oils."
+                },
+                {
+                    "title": "Custom Client Calibration on Demand",
+                    "description": "We fine-tune rotor velocity, sieve mesh dimensions, and optical camera thresholds for each client's specific moisture, broken tolerance (<3%), and count-per-ounce requirements."
+                },
+                {
+                    "title": "Small-Batch Agility & Zero Cross-Contamination",
+                    "description": "Rapid changeovers and thorough clean-downs enable us to switch smoothly between striped confectionery sunflower, black oil seeds, and 'Lady Nails' pumpkin kernels."
+                },
+                {
+                    "title": "Hyper-Local Danube Farm Proximity",
+                    "description": "Located directly in Bulgaria's premier sunflower basin, raw seeds arrive from farm gates within hours of harvest, preventing heat build-up and oxidative rancidity."
+                }
+            ]
+        },
+        "process": {
+            "title": "The 6-Stage Precision Dehulling Process",
+            "subtitle": "A closed-circuit, automated engineering sequence ensuring 99.9% optical Sortex purity and maximum whole-kernel recovery.",
+            "steps": [
+                {
+                    "step": "01",
+                    "title": "Pre-Cleaning & Destoning",
+                    "description": "Multi-deck vibrating screens, permanent neodymium magnetic traps, and heavy-duty air aspirators remove dust, field debris, stems, and mineral stones."
+                },
+                {
+                    "step": "02",
+                    "title": "Precision Calibration & Sizing",
+                    "description": "Cylindrical grading drums classify raw seeds by millimeter fractions so every individual seed receives the exact calibrated kinetic impact energy."
+                },
+                {
+                    "step": "03",
+                    "title": "Centrifugal Kinetic Impact Dehulling",
+                    "description": "Calibrated seeds enter high-speed rotor impellers spinning against an elastomeric impact ring. The kinetic impact splits the outer shell cleanly without kernel bruising."
+                },
+                {
+                    "step": "04",
+                    "title": "Multi-Channel Air Aspiration",
+                    "description": "Negative-pressure closed-circuit air streams fluidize the mixture, lifting the lightweight hulls away from the heavier nutritious meat kernels."
+                },
+                {
+                    "step": "05",
+                    "title": "Gravity Density Separation & Return Loop",
+                    "description": "Multi-deck vibrating gravity tables separate residual unhulled seeds, automatically rerouting them into a secondary gentle dehulling loop."
+                },
+                {
+                    "step": "06",
+                    "title": "Optical Sortex Laser Color Sorting",
+                    "description": "High-speed bi-chromatic optical cameras scan falling kernels, triggering compressed-air micro-jets to eliminate discolored seeds and hull fragments in milliseconds."
+                }
+            ]
+        },
+        "capacity": {
+            "title": "Facility Specifications & Operational Metrics",
+            "subtitle": "Engineered for flexibility, high recovery efficiency, and zero-waste sustainable byproduct upcycling.",
+            "metrics": [
+                { "label": "Raw Seed Intake Capacity", "value": "40 – 60 MT / 24h", "detail": "Continuous automated intake with dust suppression" },
+                { "label": "Finished Kernel Output", "value": "20 – 30 MT / 24h", "detail": "500 – 750 MT / month of 99.9% pure bakery kernels" },
+                { "label": "Kernel Purity Standard", "value": "99.9% Optical Purity", "detail": "Sortex bi-chromatic laser color verified" },
+                { "label": "Optimal Moisture Retention", "value": "6.5% – 7.5%", "detail": "Controlled storage moisture preventing mold and acidity" },
+                { "label": "Broken Chips Fraction", "value": "10 – 15 MT / 24h", "detail": "High-protein crushed meats for premium avian feeds" },
+                { "label": "Eco-Husk Pelletizing", "value": "15 – 20 MT / 24h", "detail": "Zero-waste: hulls compressed into 18 MJ/kg fuel pellets" },
+                { "label": "Silo & Buffer Storage", "value": "3,500+ MT Capacity", "detail": "Aerated flat stores and steel silos in Silistra" },
+                { "label": "Export Packaging Line", "value": "25kg Paper / 1000kg Big Bags", "detail": "Palletized, shrink-wrapped, and container-ready" }
+            ]
+        },
+        "quality": {
+            "title": "On-Site Laboratory & European Standards",
+            "subtitle": "Every processing batch is inspected before packaging and certified by independent international survey agencies.",
+            "items": [
+                "Near-Infrared (NIR) rapid testing for oil content, protein, and moisture",
+                "Free Fatty Acid (FFA < 1.5%) and peroxide value monitoring",
+                "Aflatoxin B1/B2/G1/G2 testing (< 4 ppb EU limit)",
+                "Full lot traceability from agricultural cooperative to container seal",
+                "Independent SGS / Bureau Veritas inspection available on demand",
+                "HACCP, ISO 22000 & Non-GMO European compliance"
+            ]
+        },
+        "cta": {
+            "title": "Inquire About Contract Processing or Volume Kernel Purchasing",
+            "subtitle": "Whether you require custom contract dehulling (tolling) for your raw harvest or bulk purchase of 99.9% confectionery kernels, contact our production desk.",
+            "btn": "Request Factory Quotation"
         }
     },
     "QuoteModal": {

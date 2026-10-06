@@ -29,7 +29,7 @@ const newsItems: NewsItem[] = [
         title: 'Sopreden’s Commitment to Sustainability: A Look into Our Palm Oil Production',
         date: '16 May 2023',
         tag: 'ESG & Sustainability',
-        image: '/images/site/news_palm_oil.png',
+        image: '/images/site/palm_oil_main.jpg',
         readTime: '5 min read',
         excerpt: 'Sustainability is no longer a corporate buzzword—it is an economic imperative. Discover how Sopreden ensures responsible sourcing, zero deforestation, and verifiable chain-of-custody traceability.'
     },

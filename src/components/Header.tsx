@@ -30,7 +30,8 @@ export default function Header() {
 
     const navItems = [
         { href: '/', label: t('home') },
-        { href: '/products', label: t('products'), badge: '6 Types' },
+        { href: '/products', label: t('products'), badge: '6 Commodities' },
+        { href: '/factory', label: t('factory'), badge: 'Facility' },
         { href: '/services', label: t('services') },
         { href: '/about', label: t('about') },
         { href: '/news', label: t('news') },
@@ -164,15 +165,14 @@ export default function Header() {
                     <div className="container mx-auto flex items-center justify-between px-4 sm:px-6">
                         {/* Logo */}
                         <Link href="/" className="flex items-center gap-3 group focus:outline-none">
-                            <div className="relative h-11 w-32 sm:h-12 sm:w-36 transition-transform group-hover:scale-[1.02]">
-                                <Image
-                                    src="/images/site/logo.png"
-                                    alt="Sopreden Trading"
-                                    fill
-                                    className="object-contain"
-                                    priority
-                                />
-                            </div>
+                            <Image
+                                src="/images/site/logo.png"
+                                alt="Sopreden Trading"
+                                width={80}
+                                height={50}
+                                className="h-11 sm:h-12 w-auto object-contain transition-transform group-hover:scale-[1.02]"
+                                priority
+                            />
                             <span className="hidden xl:inline-block pl-3 border-l border-gray-200 text-[11px] font-medium uppercase tracking-widest text-gray-500 leading-tight">
                                 Agricultural Commodities<br />
                                 <span className="text-[#004d51] font-semibold">Danube Trade Hub</span>
@@ -249,14 +249,13 @@ export default function Header() {
                         <div className="relative ml-auto w-full max-w-xs bg-white h-full shadow-2xl flex flex-col justify-between p-6 overflow-y-auto animate-in slide-in-from-right duration-250">
                             <div>
                                 <div className="flex items-center justify-between pb-5 border-b border-gray-100">
-                                    <div className="relative h-9 w-28">
-                                        <Image
-                                            src="/images/site/logo.png"
-                                            alt="Sopreden Trading"
-                                            fill
-                                            className="object-contain"
-                                        />
-                                    </div>
+                                    <Image
+                                        src="/images/site/logo.png"
+                                        alt="Sopreden Trading"
+                                        width={64}
+                                        height={40}
+                                        className="h-9 w-auto object-contain"
+                                    />
                                     <button
                                         onClick={() => setMobileMenuOpen(false)}
                                         className="p-1.5 rounded-lg text-gray-500 hover:bg-gray-100"

@@ -1,29 +1,61 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import Image from 'next/image';
-import { ArrowRight, FileText, ShieldCheck, ChevronRight, ChevronLeft, Globe, Anchor, Sparkles } from 'lucide-react';
+import { Link } from '@/i18n/routing';
+import { ArrowRight, FileText, ShieldCheck, ChevronRight, ChevronLeft, Globe, Anchor, Sparkles, Volume2, VolumeX, Play, Pause, Factory } from 'lucide-react';
 import QuoteModal from './QuoteModal';
+
+interface HeroSlide {
+    type: 'video' | 'image';
+    src: string;
+    poster?: string;
+    title: string;
+    subtitle: string;
+    badge: string;
+    isLiveBadge?: boolean;
+    highlight: string;
+    ctaText: string;
+    ctaHref: string;
+    secondaryCtaText?: string;
+}
 
 export default function HeroSection() {
     const [currentSlide, setCurrentSlide] = useState(0);
     const [isQuoteOpen, setIsQuoteOpen] = useState(false);
+    const [isVideoMuted, setIsVideoMuted] = useState(true);
+    const [isVideoPlaying, setIsVideoPlaying] = useState(true);
+    const videoRef = useRef<HTMLVideoElement>(null);
 
-    const slides = [
+    const slides: HeroSlide[] = [
         {
+            type: 'video',
+            src: '/videos/dehulling.mp4',
+            poster: '/images/site/store.jpg',
+            badge: 'LIVE DEHULLING LINE • SILISTRA, BULGARIA',
+            isLiveBadge: true,
+            title: 'Precision Seed Dehulling & Grain Trading',
+            subtitle: 'Operating our mechanical dehulling line in Silistra, Bulgaria. Advanced centrifugal impact dehullers, closed-circuit air aspiration, and optical Sortex grading achieving 99.9% kernel purity.',
+            highlight: '40–60 MT / 24h Processing Capacity',
+            ctaText: 'Explore Dehulling Plant',
+            ctaHref: '/factory'
+        },
+        {
+            type: 'image',
+            src: '/images/site/hero_seaport.jpg',
+            badge: 'European Agricultural Commodities Merchant',
             title: 'A World of Quality in Every Seed',
             subtitle: 'International origination and export of premium bakery-grade sunflower kernels, confectionery cuts, and authentic "Lady Nails" pumpkin seeds.',
-            badge: 'European Agricultural Commodities Merchant',
-            image: '/images/site/hero_seaport.jpg',
             highlight: 'Direct Maritime & Danube River Shipments',
             ctaText: 'Explore Commodities',
             ctaHref: '#commodities'
         },
         {
+            type: 'image',
+            src: '/images/site/hero_sunflowers.jpg',
+            badge: 'Bulgarian Dobrudzha Heartland Sourcing',
             title: 'Direct Farm-to-Port Origination',
-            subtitle: 'Deeply integrated with Bulgaria’s fertile Dobrudzha heartland, delivering certified Non-GMO oilseeds, crude vegetable oils, and custom fractions worldwide.',
-            badge: 'Global Supply Chain & Multimodal Freight',
-            image: '/images/site/hero_sunflowers.jpg',
+            subtitle: 'Deeply integrated with Bulgarian grower cooperatives, delivering certified Non-GMO oilseeds, crude vegetable oils, and custom fractions worldwide.',
             highlight: '257+ Ports & Global Destinations',
             ctaText: 'View Industrial Services',
             ctaHref: '/services'
@@ -33,9 +65,28 @@ export default function HeroSection() {
     useEffect(() => {
         const timer = setInterval(() => {
             setCurrentSlide((prev) => (prev + 1) % slides.length);
-        }, 7000);
+        }, 9000);
         return () => clearInterval(timer);
     }, [slides.length]);
+
+    const toggleVideoAudio = () => {
+        if (videoRef.current) {
+            videoRef.current.muted = !videoRef.current.muted;
+            setIsVideoMuted(videoRef.current.muted);
+        }
+    };
+
+    const toggleVideoPlay = () => {
+        if (videoRef.current) {
+            if (videoRef.current.paused) {
+                videoRef.current.play();
+                setIsVideoPlaying(true);
+            } else {
+                videoRef.current.pause();
+                setIsVideoPlaying(false);
+            }
+        }
+    };
 
     const stats = [
         { value: '257+', label: 'Global Destinations', detail: 'Ports & terminals served', icon: Globe },
@@ -49,30 +100,78 @@ export default function HeroSection() {
             {/* Background Slides with Crossfade */}
             {slides.map((slide, idx) => (
                 <div
-                    key={slide.image}
+                    key={slide.src}
                     className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${
                         idx === currentSlide ? 'opacity-100 scale-100' : 'opacity-0 scale-105 pointer-events-none'
                     }`}
                 >
-                    <Image
-                        src={slide.image}
-                        alt={slide.title}
-                        fill
-                        priority={idx === 0}
-                        className="object-cover object-center transform transition-transform duration-10000 ease-out"
-                    />
+                    {slide.type === 'video' ? (
+                        <div className="relative w-full h-full">
+                            <video
+                                ref={videoRef}
+                                src={slide.src}
+                                poster={slide.poster}
+                                autoPlay
+                                loop
+                                muted={isVideoMuted}
+                                playsInline
+                                className="w-full h-full object-cover object-center"
+                            />
+                        </div>
+                    ) : (
+                        <Image
+                            src={slide.src}
+                            alt={slide.title}
+                            fill
+                            priority={idx === 1}
+                            className="object-cover object-center transform transition-transform duration-10000 ease-out"
+                        />
+                    )}
+
                     {/* Deep Emerald & Vignette Overlays for Maximum Contrast & Luxury */}
                     <div className="absolute inset-0 bg-gradient-to-r from-[#011b1d]/95 via-[#00383b]/85 to-black/60" />
-                    <div className="absolute inset-0 bg-gradient-to-t from-[#021e20] via-transparent to-black/40" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-[#021e20] via-transparent to-black/50" />
                 </div>
             ))}
+
+            {/* Video Controls (Floating for Video Slide) */}
+            {slides[currentSlide].type === 'video' && (
+                <div className="absolute top-28 right-4 sm:right-8 z-30 flex items-center gap-2 bg-black/50 backdrop-blur-md border border-white/15 px-3 py-1.5 rounded-full text-xs text-white/90">
+                    <span className="hidden sm:inline text-[11px] font-semibold text-amber-300">
+                        HD Dehulling Line Footage
+                    </span>
+                    <button
+                        onClick={toggleVideoPlay}
+                        className="p-1.5 hover:text-white text-gray-300 hover:bg-white/10 rounded-full transition-colors"
+                        aria-label={isVideoPlaying ? 'Pause background video' : 'Play background video'}
+                        title={isVideoPlaying ? 'Pause video' : 'Play video'}
+                    >
+                        {isVideoPlaying ? <Pause className="h-3.5 w-3.5" /> : <Play className="h-3.5 w-3.5" />}
+                    </button>
+                    <button
+                        onClick={toggleVideoAudio}
+                        className="p-1.5 hover:text-white text-gray-300 hover:bg-white/10 rounded-full transition-colors"
+                        aria-label={isVideoMuted ? 'Unmute video audio' : 'Mute video audio'}
+                        title={isVideoMuted ? 'Unmute' : 'Mute'}
+                    >
+                        {isVideoMuted ? <VolumeX className="h-3.5 w-3.5" /> : <Volume2 className="h-3.5 w-3.5 text-amber-400" />}
+                    </button>
+                </div>
+            )}
 
             {/* Hero Main Content */}
             <div className="relative container mx-auto px-4 sm:px-6 pt-24 pb-20 lg:pt-32 lg:pb-36 z-10">
                 <div className="max-w-3xl space-y-6">
                     {/* Badge */}
                     <div className="inline-flex items-center gap-2 rounded-full bg-white/10 backdrop-blur-md border border-white/20 px-3.5 py-1.5 text-xs font-semibold text-amber-300 shadow-sm animate-in fade-in slide-in-from-bottom-2 duration-300">
-                        <span className="flex h-2 w-2 rounded-full bg-emerald-400 animate-pulse" />
+                        {slides[currentSlide].isLiveBadge ? (
+                            <span className="relative flex h-2 w-2">
+                                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75" />
+                                <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500" />
+                            </span>
+                        ) : (
+                            <span className="flex h-2 w-2 rounded-full bg-emerald-400" />
+                        )}
                         <span>{slides[currentSlide].badge}</span>
                     </div>
 
@@ -88,13 +187,13 @@ export default function HeroSection() {
 
                     {/* CTA Actions */}
                     <div className="pt-4 flex flex-wrap items-center gap-4">
-                        <a
+                        <Link
                             href={slides[currentSlide].ctaHref}
                             className="inline-flex items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-amber-500 to-amber-600 px-6 py-3.5 text-base font-bold text-gray-950 shadow-lg shadow-amber-500/25 hover:from-amber-400 hover:to-amber-500 hover:shadow-amber-500/40 transition-all duration-200 hover:scale-[1.02] active:scale-[0.98]"
                         >
                             <span>{slides[currentSlide].ctaText}</span>
                             <ArrowRight className="h-4 w-4" />
-                        </a>
+                        </Link>
 
                         <button
                             onClick={() => setIsQuoteOpen(true)}
@@ -103,6 +202,16 @@ export default function HeroSection() {
                             <FileText className="h-4 w-4 text-teal-300" />
                             <span>Request Trade Quote</span>
                         </button>
+
+                        {slides[currentSlide].type === 'video' && (
+                            <Link
+                                href="/factory"
+                                className="inline-flex items-center gap-1.5 text-sm font-semibold text-teal-200 hover:text-white underline underline-offset-4 pl-2"
+                            >
+                                <Factory className="h-4 w-4 text-amber-400" />
+                                <span>See Full Factory Process & Capacity</span>
+                            </Link>
+                        )}
                     </div>
 
                     {/* Trust Indicators */}

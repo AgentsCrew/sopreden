@@ -39,7 +39,7 @@ const articlesData: Record<string, ArticleData> = {
         date: '16 May 2023',
         tag: 'ESG & Sustainability',
         readTime: '5 min read',
-        image: '/images/site/news_palm_oil.png',
+        image: '/images/site/palm_oil_main.jpg',
         content: [
             'In an era where environmental stewardship is not merely a marketing claim but an indispensable commercial requirement, Sopreden Trading is proud to emphasize its unwavering dedication to responsible palm oil sourcing and supply chain transparency.',
             'Palm oil remains one of the world’s most versatile vegetable lipids, delivering unmatched thermal stability, neutral flavor, and efficient yield per hectare. However, safeguarding tropical ecosystems and biodiversity requires rigorous chain-of-custody protocols.',
