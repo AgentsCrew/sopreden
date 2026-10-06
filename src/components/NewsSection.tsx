@@ -16,6 +16,24 @@ interface NewsItem {
 
 const newsItems: NewsItem[] = [
     {
+        slug: 'new-website-launch',
+        title: 'Sopreden Launches Next-Gen Digital Trading Hub & Interactive Platform',
+        date: '06 Oct 2026',
+        tag: 'Digital Innovation',
+        image: '/images/site/store.jpg',
+        readTime: '3 min read',
+        excerpt: 'Sopreden Trading unveils a premier digital trading platform: featuring instant multi-commodity RFQ quotation, interactive facility tours, live dehulling footage, and seamless multilingual trading desk support.'
+    },
+    {
+        slug: 'new-dehulling-plant-operational',
+        title: 'New High-Precision Dehulling Plant in Silistra Operating Since July',
+        date: '15 Jul 2026',
+        tag: 'Facility Expansion',
+        image: '/images/site/sunflower_bakery_premium.jpg',
+        readTime: '4 min read',
+        excerpt: 'Our state-of-the-art boutique seed dehulling and optical Sortex sorting facility in Silistra has reached full commercial speed, delivering 99.9% pure sunflower and pumpkin kernels for European manufacturers.'
+    },
+    {
         slug: 'benefits-seeds',
         title: 'Discover the Benefits of Sopreden’s Premium Seed Selection',
         date: '16 May 2023',
@@ -81,8 +99,8 @@ export default function NewsSection() {
                     </Link>
                 </div>
 
-                {/* News Grid (2x2 on desktop) */}
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
+                {/* News Grid (3 columns on desktop) */}
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
                     {newsItems.map((article) => (
                         <article
                             key={article.slug}

@@ -28,10 +28,16 @@ export default function Header() {
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
 
-    const navItems = [
+    interface NavItem {
+        href: string;
+        label: string;
+        badge?: string;
+    }
+
+    const navItems: NavItem[] = [
         { href: '/', label: t('home') },
-        { href: '/products', label: t('products'), badge: '6 Commodities' },
-        { href: '/factory', label: t('factory'), badge: 'Facility' },
+        { href: '/products', label: t('products') },
+        { href: '/factory', label: t('factory') },
         { href: '/services', label: t('services') },
         { href: '/about', label: t('about') },
         { href: '/news', label: t('news') },

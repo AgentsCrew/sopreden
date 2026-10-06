@@ -128,9 +128,18 @@ export default function HeroSection() {
                         />
                     )}
 
-                    {/* Deep Emerald & Vignette Overlays for Maximum Contrast & Luxury */}
-                    <div className="absolute inset-0 bg-gradient-to-r from-[#011b1d]/95 via-[#00383b]/85 to-black/60" />
-                    <div className="absolute inset-0 bg-gradient-to-t from-[#021e20] via-transparent to-black/50" />
+                    {/* Responsive Overlays - Much lighter on video so footage is clearly visible */}
+                    {slide.type === 'video' ? (
+                        <>
+                            <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/25 to-transparent" />
+                            <div className="absolute inset-0 bg-gradient-to-t from-[#021e20]/75 via-transparent to-black/20" />
+                        </>
+                    ) : (
+                        <>
+                            <div className="absolute inset-0 bg-gradient-to-r from-[#011b1d]/85 via-[#00383b]/60 to-black/30" />
+                            <div className="absolute inset-0 bg-gradient-to-t from-[#021e20]/80 via-transparent to-black/30" />
+                        </>
+                    )}
                 </div>
             ))}
 
@@ -176,12 +185,12 @@ export default function HeroSection() {
                     </div>
 
                     {/* Headline */}
-                    <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white leading-[1.12]">
+                    <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white leading-[1.12] drop-shadow-[0_2px_12px_rgba(0,0,0,0.85)]">
                         {slides[currentSlide].title}
                     </h1>
 
                     {/* Subtitle */}
-                    <p className="text-lg sm:text-xl text-teal-100/90 leading-relaxed max-w-2xl font-normal">
+                    <p className="text-lg sm:text-xl text-teal-100/95 leading-relaxed max-w-2xl font-normal drop-shadow-[0_1px_6px_rgba(0,0,0,0.8)]">
                         {slides[currentSlide].subtitle}
                     </p>
 

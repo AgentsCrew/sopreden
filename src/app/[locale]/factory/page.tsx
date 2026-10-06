@@ -197,7 +197,7 @@ export default function FactoryPage() {
                             <div className="relative aspect-16/9 w-full">
                                 <video
                                     ref={videoRef}
-                                    src="/videos/dehulling.mp4"
+                                    src="/videos/sopreden2.mp4"
                                     poster="/images/site/store.jpg"
                                     autoPlay
                                     loop

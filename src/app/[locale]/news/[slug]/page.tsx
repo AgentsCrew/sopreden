@@ -19,6 +19,36 @@ interface ArticleData {
 }
 
 const articlesData: Record<string, ArticleData> = {
+    'new-website-launch': {
+        title: 'Sopreden Launches Next-Gen Digital Trading Hub & Interactive Platform',
+        date: '06 Oct 2026',
+        tag: 'Digital Innovation',
+        readTime: '3 min read',
+        image: '/images/site/store.jpg',
+        content: [
+            'Today marks a transformative milestone for Sopreden Trading with the official unveiling of our next-generation digital trading platform. Engineered from the ground up for international grain traders, food manufacturers, and commercial brokers, the new portal delivers an unprecedented standard of transparency, speed, and market utility.',
+            'Why is the new platform a game-changer? First and foremost is our all-new Instant Commodity RFQ Builder. Instead of waiting days for back-and-forth emails, commodity buyers can select products, volume, packaging specifications (from 25kg multi-wall bags to 1000kg Big Bags or bulk flexitanks), and request exact delivery terms (FOB Port of Varna, CIF Mediterranean/European terminals, or DAP overland) with rapid trade desk response.',
+            'Second, the site introduces complete transparency into our processing capabilities. Prospective clients can explore our boutique Silistra dehulling plant with live production footage, detailed technical flowcharts of our 6-stage centrifugal impact line, and exact Sortex optical purity metrics (99.9% whole-kernel guarantee).',
+            'Finally, the entire experience is built on a state-of-the-art Next.js performance architecture, delivering sub-second page transitions, full mobile responsiveness, seamless multilingual support across 7 European languages, and instant direct WhatsApp communication with our live trading desk in Silistra.'
+        ],
+        relatedSlug: 'new-dehulling-plant-operational',
+        relatedTitle: 'New High-Precision Dehulling Plant in Silistra Operating Since July'
+    },
+    'new-dehulling-plant-operational': {
+        title: 'New High-Precision Dehulling Plant in Silistra Operating Since July',
+        date: '15 Jul 2026',
+        tag: 'Facility Expansion',
+        readTime: '4 min read',
+        image: '/images/site/sunflower_bakery_premium.jpg',
+        content: [
+            'Sopreden Trading is proud to announce that our newly expanded, high-precision seed dehulling and optical sorting facility in Silistra, Bulgaria has been in continuous commercial operation since July 2026. This purpose-built plant represents a major leap forward in European seed processing, catering specifically to human-grade bakery and confectionery standards.',
+            'With a daily intake capacity of 40 to 60 metric tons of raw oilseeds and pumpkin harvests, the plant yields 20 to 30 metric tons of 99.9% pure, undamaged kernels every 24 hours. Located strategically in the heart of the Dobrudzha agricultural basin directly on the Danube river, freshly harvested seeds arrive at our intake silos within hours of cutting, eliminating oxidative rancidity and preserving natural moisture balance.',
+            'Unlike industrial mega-crushers that pulverize raw seeds solely for crude oil yield, Sopreden’s facility uses gentle kinetic centrifugal impact rotors combined with closed-circuit air aspiration and bi-chromatic Sortex laser sorting. This engineering sequence guarantees an exceptionally low broken count (< 3%), zero hull contamination, and intact kernel geometry.',
+            'In addition to producing our own premium bakery and confectionery kernels, the Silistra facility is actively taking on contract processing (tolling) for partner agricultural producers. Furthermore, operating as a zero-waste facility, all separated outer hulls are immediately compressed on-site into high-density 18 MJ/kg eco-fuel pellets.'
+        ],
+        relatedSlug: 'new-website-launch',
+        relatedTitle: 'Sopreden Launches Next-Gen Digital Trading Hub & Interactive Platform'
+    },
     'benefits-seeds': {
         title: 'Discover the Benefits of Sopreden’s Premium Seed Selection',
         date: '16 May 2023',
